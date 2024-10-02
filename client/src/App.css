@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* In your CSS file (e.g., App.css or a separate stylesheet) */
+.level-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 30px; /* Adds space before the section */
+    padding-bottom: 10px; /* Adds a little space below */
+    border-bottom: 2px solid #ccc; /* Underline each level for clarity */
+  }
+  
+  .roadmap-content {
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
