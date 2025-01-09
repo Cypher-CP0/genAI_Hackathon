@@ -41,7 +41,7 @@ export default function Component() {
     setRoadmap("");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/generate-roadmap", { topic });
+      const response = await axios.post("https://server-gen-ai-hackathon.vercel.app/api/generate-roadmap", { topic });
       setRoadmap(response.data.roadmap);
     } catch (err) {
       console.error("Error fetching roadmap:", err);
@@ -64,7 +64,7 @@ export default function Component() {
     const fullQuestion = quotedText ? `"${quotedText}" - ${question}` : question;
 
     try {
-      const response = await axios.post("http://localhost:5000/api/ask-question", { question: fullQuestion });
+      const response = await axios.post("https://server-gen-ai-hackathon.vercel.app/api/ask-question", { question: fullQuestion });
 
       // Update chat history with the new Q&A pair
       setChatHistory((prevChat) => [
