@@ -15,7 +15,9 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-    origin: 'https://gen-ai-hackathon-eta.vercel.app/' // Update to your frontend's deployed URL in production
+    origin: 'https://gen-ai-hackathon-eta.vercel.app', // Your Vercel frontend URL
+    methods: ['GET', 'POST', 'OPTIONS'], // Ensure these methods are allowed
+    credentials: true // If cookies or authorization headers are used
 }));
 app.use(express.json());
 
